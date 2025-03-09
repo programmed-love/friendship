@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b7cfde; /* Light pastel pink background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ef87aa;
+            text-align: center;
+        }
+
+        h1 span {
+            font-size: 40px;
+        }
+
+        .content {
+           
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            color:#e74c3c;
+            background-image: url("https://i.pinimg.com/736x/96/e9/0e/96e90eae0ecb640d61cdbb453a1861da.jpg");
+            background-size:70%;
+        }
+
+        
+        .points {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .points li {
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        .button.no {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .button.agree {
+            background-color: #2ecc71;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LOVE CONTRACT <span>💌</span></h1>
+
+    <div class="content">
+        <h2><span style="color:#e74c3c;"> A bestfriend should do for their besties::</span></h2>
+        <ul class="points">
+            <li>Always listen to her, even when she's not speaking.</li>
+            <li>Surprise her with little gifts and gestures.</li>
+            <li> Have fun together and document it all.</li>
+            <li>Communicate openly and honestly, especially in tough times.</li>
+            <li>Take her stand even when she is at fault.</li>
+        </ul>
+
+        <div class="buttons">
+            <button class="button no" onclick="handleNo()">No</button>
+            <button class="button agree" onclick="handleAgree()">Agree</button>
+        </div>
+    </div>
+
+    <script>
+        function handleNo() {
+            alert("you are not a good friend");
+        }
+
+        function handleAgree() {
+            window.location.href = "update.html"; // Redirects to the new page
+        }
+    </script>
+
+</body>
+</html>

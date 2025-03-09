@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 50px;
+        }
+        .warning-message {
+            font-weight: bold;
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+        .warning-text {
+            color: red;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-bottom: 100px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 11px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 100px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        .button.time {
+            background-color: #c93f08;
+            color: white;
+        }
+        .button.always {
+            background-color: #2d6a4f;
+            color: white;
+        }
+        .gif-container{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="warning-message">
+        Do you really <b></b> want to go <b></b> through all this with me?
+    </div>
+
+    <div class="warning-text">
+        WARNING: THERE IS NO COMING BACK
+    </div>
+    <div class="gif-container">
+        <img src="https://i.pinimg.com/originals/2f/11/c4/2f11c47c12294aaece70d0e71c739892.gif" width="450" height="250">
+    </div>
+
+    <div class="buttons">
+        <button class="button time" onclick="takeTime()">Take a time to think</button>
+        <button class="button always" onclick="alwaysWithYou()">Always with you</button>
+    </div>
+
+    <script>
+        function takeTime() {
+            window.location.href = "please.html";
+        }
+
+        function alwaysWithYou() {
+            window.location.href = "love.html"; // Redirect to 'love.html'
+        }
+    </script>
+    
+</body>
+</html>

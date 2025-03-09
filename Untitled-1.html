@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ebb7d5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6ac7e6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .hint {
+            color: #eb1a13;
+            font-size: 45px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Password</h2>
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="validatePassword()">Submit</button>
+        <p id="hint1" class="hint">: It’s the day we met.</p>
+        <p id="hint2" class="hint">: Include date,month and a year .</p>
+        <p id="hint2" class="hint">: Include date and a short of month and year.</p>
+    </div>
+
+    <script>
+        let attemptCount = 0;
+
+        // The correct password (for demonstration purposes, change as needed)
+        const correctPassword = "8sept2023"; 
+
+        function validatePassword() {
+            const userPassword = document.getElementById("password").value;
+
+            if (attemptCount === 0 && userPassword !== correctPassword) {
+                document.getElementById("hint1").style.display = "block"; // Show first hint
+                attemptCount++;
+            } else if (attemptCount === 1 && userPassword !== correctPassword) {
+                document.getElementById("hint2").style.display = "block"; // Show second hint
+                attemptCount++;
+            } else if (userPassword === correctPassword) {
+                // Redirect to the warning page if password is correct
+                window.location.href = "warning.html"; // Redirect to warning page
+            } else {
+                alert("Incorrect password!");
+            }
+        }
+
+        // Corrected function definition (added for any other purposes)
+        function handleAgree() {
+            alert("It's okay, love takes time to understand!"); // This will now trigger correctly
+            window.location.href = "update.html"; // Redirects to the new page after agreement
+        }
+    </script>
+
+</body>
+</html>
